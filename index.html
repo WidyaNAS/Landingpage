@@ -106,52 +106,44 @@
         }
 
         .slider {
-            position: relative;
-            width: 100%;
-            max-width: 500px;
-            margin: auto;
-            overflow: hidden;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-        }
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
 
-        .slides {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            width: 100%;
-        }
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px; /* Adjust width if needed */
+    height: 40px; /* Adjust height if needed */
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 50%;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        .slides img {
-            width: 100%;
-            border-radius: 8px;
-        }
+.prev {
+    left: 0; /* Move to the far left */
+}
 
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            border-radius: 50%;
-            user-select: none;
-            background-color: rgba(0, 0, 0, 0.5);
-            transform: translateY(-50%);
-        }
+.next {
+    right: 0; /* Move to the far right */
+}
 
-        .prev {
-            left: 10px;
-        }
-
-        .next {
-            right: 10px;
-        }
-
-        .prev:hover, .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
     </style>
 </head>
 <body>
