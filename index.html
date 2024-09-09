@@ -66,7 +66,7 @@
             background-color: #ff6600;
             color: #fff;
         }
- /* Animation for bouncing arrow */
+
         @keyframes bounce {
             0%, 100% {
                 transform: translateY(0);
@@ -81,6 +81,7 @@
             color: #ff6600;
             animation: bounce 1s infinite;
         }
+
         .cta {
             margin-top: 20px;
         }
@@ -99,7 +100,11 @@
             cursor: pointer;
             margin-top: 20px;
         }
-/* Image Slider */
+
+        .cta button:hover {
+            background-color: #e65c00;
+        }
+
         .slider {
             position: relative;
             width: 100%;
@@ -107,6 +112,7 @@
             margin: auto;
             overflow: hidden;
             border-radius: 8px;
+            background-color: #f9f9f9;
         }
 
         .slides {
@@ -126,26 +132,26 @@
             top: 50%;
             width: auto;
             padding: 16px;
-            margin-top: -22px;
             color: white;
             font-weight: bold;
             font-size: 18px;
-            border-radius: 0 3px 3px 0;
+            border-radius: 50%;
             user-select: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            transform: translateY(-50%);
+        }
+
+        .prev {
+            left: 10px;
         }
 
         .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
+            right: 10px;
         }
 
         .prev:hover, .next:hover {
             background-color: rgba(0, 0, 0, 0.8);
         }
-        .cta button:hover {
-            background-color: #e65c00;
-        }
-
     </style>
 </head>
 <body>
@@ -167,31 +173,29 @@
             <button>Tahan air dan anti bocor</button>
             <button>Mudah dibersihkan</button>
             <button>Ringan dan mudah dipasang</button>
-	    <button>Banyak Pilihan Motif</button>
+            <button>Banyak Pilihan Motif</button>
         </div>
 
         <div class="cta">
             <p>HASIL PEMASANGAN</p>
 
-             <!-- Image Slider Section -->
-        <div class="slider">
-            <div class="slides">
-                <img src="2.jpeg" alt="1">
-                <img src="3.jpeg" alt="2">
-                <img src="4.jpeg" alt="3">
+            <div class="slider">
+                <div class="slides">
+                    <img src="2.jpeg" alt="1">
+                    <img src="3.jpeg" alt="2">
+                    <img src="4.jpeg" alt="3">
+                </div>
+                <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
+                <a class="next" onclick="moveSlides(1)">&#10095;</a>
             </div>
-            <!-- Next and Previous Buttons -->
-            <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
-            <a class="next" onclick="moveSlides(1)">&#10095;</a>
-        </div>
+            
             <br>
-<!-- Bouncing arrow before CTA section -->
-        <div class="arrow">⬇️</div>
+            <div class="arrow">⬇️</div>
             <button>Klik disini untuk Ambil Promo</button>
         </div>
-
     </div>
-  <script>
+
+    <script>
         let currentIndex = 0;
         const slides = document.querySelector('.slides');
         const totalSlides = slides.children.length;
