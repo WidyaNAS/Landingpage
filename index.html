@@ -106,58 +106,58 @@
         }
 
         .slider {
-            position: relative;
-            width: 700px; /* Fixed width for 700x700px size */
-            height: 700px; /* Fixed height for 700x700px size */
-            margin: auto;
-            overflow: hidden;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-        }
+    position: relative;
+    width: auto; /* Menyesuaikan lebar secara otomatis sesuai ukuran gambar */
+    height: auto; /* Menyesuaikan tinggi secara otomatis sesuai ukuran gambar */
+    margin: auto;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
 
-        .slides {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            width: calc(100% * 3); /* Adjust based on the number of images */
-        }
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
 
-        .slides img {
-            width: 700px; /* Fixed width for each image */
-            height: 700px; /* Fixed height for each image */
-            object-fit: cover; /* Maintain aspect ratio, cropping if necessary */
-            flex-shrink: 0;
-            border-radius: 8px;
-        }
+.slides img {
+    width: auto; /* Sesuai dengan ukuran gambar asli */
+    height: auto; /* Sesuai dengan ukuran gambar asli */
+    object-fit: cover; /* Menjaga proporsi gambar */
+    flex-shrink: 0;
+    border-radius: 8px;
+}
 
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 40px;
-            height: 40px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            border-radius: 50%;
-            user-select: none;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 50%;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        .prev {
-            left: 10px;
-        }
+.prev {
+    left: 10px;
+}
 
-        .next {
-            right: 10px;
-        }
+.next {
+    right: 10px;
+}
 
-        .prev:hover, .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
     </style>
 </head>
 <body>
